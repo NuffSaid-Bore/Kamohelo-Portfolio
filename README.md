@@ -1,7 +1,7 @@
-###Portfolio Website###
+Portfolio Websit
 -
 
-#HTML CSS & Javascript Project#
+HTML CSS & Javascript Project
 -
 
 Simple portfolio website to showcase 
@@ -12,11 +12,11 @@ By following object reference for setting up
 Colors, margins, padding as well as size 
 In general including width and height. 
 
-#Technologies Used#
+Technologies Used
 -
 -VS Code
 
-##Programming Languages##
+Programming Languages
 -
 -HTML5
 -CSS
