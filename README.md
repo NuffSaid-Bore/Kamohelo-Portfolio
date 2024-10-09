@@ -15,11 +15,16 @@ In general including width and height.
 Technologies Used
 -
 -VS Code
+-Chrome, Mozilla Firefox, Microsoft Edge(Testing) 
 
 Programming Languages
 -
 -HTML5
 -CSS
 -Javascript( DOM Elements Manipulation) 
+
+Responsiveness
+-
+-Responsive for desktop, laptop (personal computer), mobile as well as tablet devices
 
 
