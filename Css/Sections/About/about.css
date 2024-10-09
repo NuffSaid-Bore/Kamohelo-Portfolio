@@ -1,0 +1,32 @@
+.about-container {
+    background-color: var(--clr-secondary);
+    position: relative;
+    color: var(--clr-default); 
+    height: var(--sz-default); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-left: var(--sz-margin-section-left);
+    border-top-left-radius: var(--brd-radius); 
+    border-bottom-left-radius: var(--brd-radius);
+}
+
+
+/* Tablet devices */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        margin-left: 20px; /* Adjust left margin */
+        padding: 20px; /* Add padding */
+    }
+
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 10px; /* Reduce padding for mobile */
+        margin-left: 10px;
+    }
+
+}

@@ -1,0 +1,63 @@
+.home-container {
+    background-color: var(--clr-secondary);
+    position: relative;
+    color: var(--clr-default); 
+    height: var(--sz-default); 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-left: var(--sz-margin-section-left);
+    border-top-left-radius: var(--brd-radius); 
+    border-bottom-left-radius: var(--brd-radius);
+}
+.profile-image {
+    width: 350px;
+    height:  350px;
+    margin-right: var(--sz-margin-section-left);
+    margin-left: 30px;
+}
+
+.logo {
+    width: 130px;
+    height: 100px;
+    margin-top: -100px;
+    padding-top: -10px;
+    padding-bottom: 20px;
+}
+
+/* Tablet devices */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; 
+        margin-left: 20px;
+         
+    }
+
+    .profile-image {
+        width: 250px; 
+        height: 250px; 
+        margin: 20px 0;
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+        margin-top: -180px; /
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    
+    .profile-image {
+        width: 200px; 
+        height: 200px; 
+        margin: 10px 0; 
+    }
+
+    .logo {
+        width: 80px; 
+        height: auto; 
+        margin-top: -180px;
+    }
+}
