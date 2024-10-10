@@ -1,5 +1,7 @@
 const menuLinks = document.querySelectorAll('.menu a');
 const sections = document.querySelectorAll('.section');
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menuList");
 
 menuLinks.forEach(link => {
     link.addEventListener('click', function(event) {
@@ -15,3 +17,13 @@ menuLinks.forEach(link => {
         targetSection.classList.add('active');
     });
 });
+
+
+hamburger.addEventListener("click", function() {
+    // Toggle the active class to show/hide the menu
+    menu.classList.toggle("hidden");
+    document.querySelector('.menu').classList.toggle('active'); // Toggle active class
+    document.querySelector('.container').classList.toggle('hamburger-visible');
+});
+
+

@@ -16,8 +16,16 @@
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column; /* Stack items vertically */
-        margin-left: 20px; /* Adjust left margin */
+        margin-left: 40px; /* Adjust left margin */
         padding: 20px; /* Add padding */
+        transition: margin-left 1.5s; /* Smooth transition for margin */
+    
+    }
+    .hamburger-visible + .content .contact-container {
+        margin-left: 20px; /* Add space when hamburger is visible */
+    }
+    .menu.active ~ .content .contact-container {
+        margin-left: 1%; /* Adjust margin when menu is open */
     }
 
 }
@@ -26,7 +34,12 @@
 @media (max-width: 480px) {
     .contact-container {
         padding: 10px; /* Reduce padding for mobile */
-        margin-left: 10px;
+    }
+    .hamburger-visible + .content .contact-container {
+        margin-left: 20px; /* Add space when hamburger is visible */
+    }
+    .menu.active ~ .content .contact-container {
+        margin-left: 1%; /* Adjust margin when menu is open */
     }
 
 }
