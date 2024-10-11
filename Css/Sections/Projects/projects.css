@@ -1,15 +1,75 @@
 .project-container {
-    background-color: var(--clr-secondary);
+    background-color: var(--clr-bg);
     position: relative;
     color: var(--clr-default); 
     height: 100%; 
     display: flex; 
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Change to column for vertical layout */
+    align-items: center; /* Center items horizontally */
     margin-left: var(--sz-margin-section-left);
     border-top-left-radius: var(--brd-radius); 
     border-bottom-left-radius: var(--brd-radius);
 }
+
+.filter-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Space below filter box */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.filter-item {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: 1px solid var(--clr-primary);
+    border-radius: var(--brd-radius);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-item:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-bg);
+}
+
+.filter-item.active {
+    background-color: var(--clr-primary);
+    color: var(--clr-default);
+}
+
+.portfolio-items-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    display: none; /* Hide all items by default */
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.portfolio-item.active {
+    display: flex; /* Show items that are active */
+    transform: scale(1.05);
+}
+
+.item-img {
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    border-radius: var(--brd-radius);
+}
+
+.section-heading {
+    align-self: flex-start; /* Align to the left */
+    margin-bottom: 10px; /* Space below the heading */
+    border-bottom: 2px solid var(--clr-default); /* Border below the text */
+    padding-bottom: 5px; /* Space between text and border */
+}
+
 
 
 /* Tablet devices */

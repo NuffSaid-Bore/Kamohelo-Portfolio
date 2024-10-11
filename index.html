@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamohelo Bore</title>
     <link rel="stylesheet" href="./Css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
@@ -15,19 +16,30 @@
             <ul id="menuList" class="hidden">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="content">
             <section id="home" class="section active">
                 <div class="home-container">
-                    <img src="./images/profile.png" alt="Description of image" class="profile-image">
-                    <div class="text-container">
-                        <h1>Your Title Here</h1>
-                        <p>Your paragraph text goes here. This is where you can provide more information about your portfolio or yourself.</p>
+                    <img src="https://raw.githubusercontent.com/Mr-Goodday/CodePen-imgs/48d5faa50e5b7eaead4983c787ffea90030c716f/witam-ciekawskich.svg" alt="profile Image" class="profile-image">
+                    <div class="home-content">
+                        <h3>Hello, Visitor! I am</h3>
+                        <h1>Kamohelo Bore</h1>
+                        <h3>I am a <span class="multiple-text"></span></h3>
+                        <p>My hobbies include Computer science and Video Games. This Website is just a showcase of my programming skills. You can find some inspiration for your own too, or else you can hire me as a Front-end/Back-end Developer for your website!</p>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/Mochpxt__" target="_blank" style="--i:1"><i class='bx bxl-instagram-alt'></i></a>
+                            <a href="https://wa.me/+27748632478" target="_blank" style="--i:2"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="https://discordapp.com/users/" target="_blank" style="--i:3"><i class='bx bxl-discord-alt'></i></a>
+                            <a href="https://www.github.com/NuffSaid-Bore" target="_blank" style="--i:4"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/" target="_blank" style="--i:5"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <a href="#" class="btn">Hire me</a> 
                     </div>
                 </div>
+                
             </section>
             <section id="about" class="section">
                 <div class="about-container">
@@ -37,9 +49,37 @@
             </section>
             <section id="projects" class="section">
                 <div class="project-container">
-                    <h1>My Projects</h1>
+                    <h1 class="section-heading">Portfolio</h1>
+                    <h4 class="section-sub-heading">My Works</h4>
+            
+                    <ul class="filter-box">
+                        <li class="filter-item active">All</li>
+                        <li class="filter-item">Media</li>
+                        <li class="filter-item">SoundCloud</li>
+                    </ul>
+            
+                    <div class="portfolio-items-group">
+                        <div class="portfolio-item active">
+                            <img src="https://i.postimg.cc/N0mGDRsP/1.jpg" alt="image" class="item-img">
+                            <h4 class="item-name">SoundCloud Audio</h4>
+                            <div class="item-icon">
+                                <ion-icon name="volume-high"></ion-icon>
+                            </div>
+                            <div class="item-category">SoundCloud</div>
+                        </div>
+            
+                        <div class="portfolio-item active">
+                            <img src="https://i.postimg.cc/Qxd1NpZ7/2.jpg" alt="image" class="item-img">
+                            <h4 class="item-name">Media Project 1</h4>
+                            <div class="item-icon">
+                                <ion-icon name="film"></ion-icon>
+                            </div>
+                            <div class="item-category">Media</div>
+                        </div>
+                    </div>
                 </div>
             </section>
+            
             <section id="contact" class="section">
                 <div class="contact-container">
                     <h1>Contact Me</h1>
@@ -50,6 +90,7 @@
         <footer class="footer">
             <p>Copyright &copy; 2024 Kamohelo Bore <a rel="nofollow" href="https://Kamohelo-bore-portfolio.kesug.com">Kamohelo Bore</a></p>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="./Scripts/script.js"></script>
     
 </body>
