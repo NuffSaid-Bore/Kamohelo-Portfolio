@@ -5,6 +5,7 @@
 
 :root {
     --clr-primary:#7F4BD2;
+    --clr-primary-lighter: #5d526d;
     --clr-secondary: rgba(0, 0, 0, 0.5);
     --clr-bg: #000;
     --clr-hamburger-bg:rgba(0,0,0,0);

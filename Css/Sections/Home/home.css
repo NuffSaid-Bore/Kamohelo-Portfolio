@@ -150,9 +150,9 @@
 }
 
 .logo {
-    width: 130px;
-    height: 100px;
-    margin-top: -100px;
+    width: 100px;
+    height: auto;
+    margin-bottom: 50px;
     padding-top: -10px;
     padding-bottom: 20px;
 }
@@ -190,19 +190,28 @@
 /* Mobile devices */
 @media (max-width: 480px) {
     .hamburger-visible + .content .home-container {
-        margin-left: 20px; /* Add space when hamburger is visible */
+        margin-left: 20px; 
     }
     .menu.active ~ .content .home-container {
-        margin-left: 1%; /* Adjust margin when menu is open */
+        margin-left: 1%; 
     }
     .home-container {
         padding: 10px; /* Reduce padding for mobile */
         
     }
     .profile-image {
-        width: 200px; 
-        height: 200px; 
+        width: 150px; 
+        height: 150px; 
         margin: 10px 0; 
+    }
+    .home-container h3{
+        font-size: 18px;
+    }
+    .home-container h1{
+        font-size: 20px;
+    }
+    .home-container p{
+        font-size: 14px;
     }
 
     .logo {
