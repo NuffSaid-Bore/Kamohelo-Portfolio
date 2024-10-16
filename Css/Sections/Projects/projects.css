@@ -20,6 +20,9 @@
     list-style: none; 
     padding: 5px 0px 5px 0px; 
     margin: 0px 70px 0px 65%;
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: calc(.2s * var(--i) + 2s);
 }
 
 .filter-item {
@@ -78,12 +81,14 @@
 .section-sub-heading {
     align-self: flex-end; 
     padding-right: 80px;
+    margin-bottom: 10px;
 }
 
 .project-btn {
-    margin-left: 40px;
-    margin-right: 80%;
+    margin-left: 42%;
+    margin-right: auto;
     margin-top: 30px;
+    
 }
 
 /* Tablet devices */

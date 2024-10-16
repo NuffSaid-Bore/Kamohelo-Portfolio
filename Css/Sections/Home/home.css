@@ -84,17 +84,22 @@
 .btn {
     display: inline-block;
     padding: 12px 28px;
-    background: var(--clr-primary);
+    background: var(--clr-secondary);
     border-radius: 40px;
     box-shadow: 0 0 10px var(--clr-primary);
     font-size: 16px;
-    color: var(--clr-default);
+    color: var(--clr-primary);
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
     margin-top: 20px;
     animation: fadeInUp 1s ease forwards;
     animation-delay: 2.5s;
+}
+.btn:hover {
+    background: var(--clr-default);
+    box-shadow: 0 0 10px var(--clr-primary);
+    color: var(--clr-primary);
 }
 .home-content, .home-content h3, .home-content h1, .home-content p, .profile-image, .social-media a, .btn {
     opacity: 0;
