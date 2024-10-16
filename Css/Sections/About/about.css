@@ -471,9 +471,7 @@
 /* Tablet devices */
 @media (max-width: 768px) {
     .about-container {
-        flex-direction: column; /* Stack items vertically */
-        margin-left: 40px; /* Adjust left margin */
-        padding: 20px; /* Add padding */
+        width: 100%;
         transition: margin-left 1.5s; /* Smooth transition for margin */
     
     }
@@ -483,19 +481,84 @@
     .menu.active ~ .content .about-container {
         margin-left: 1%; /* Adjust margin when menu is open */
     }
+  .left-container, .right-container {
+      width: 48%; /* Side by side layout */
+  }
+  
+  .profile-pic {
+      width: 80%; /* More size for profile pic */
+      height: auto;
+  }
+  
+  .cv-button {
+      padding-left: 30px; /* Adjust padding */
+  }
+  
+  .cd-horizontal-timeline .events-content h2 {
+      font-size: 2rem; /* Medium title font size */
+  }
+  
+  .cd-horizontal-timeline .events-content p {
+      font-size: 1.2rem; /* Medium paragraph font size */
+  }
+  
 
 }
 
 /* Mobile devices */
 @media (max-width: 480px) {
     .about-container {
-        padding: 10px; /* Reduce padding for mobile */
-    }
+      background-color: var(--clr-bg);
+      position: relative;
+      color: var(--clr-default);
+      height: var(--sz-default);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      margin-left: var(--sz-margin-section-left);
+      border-top-left-radius: var(--brd-radius);
+      border-bottom-left-radius: var(--brd-radius);
+  }
+  
+  .left-container, .right-container {
+      width: 100%; /* Full width on mobile */
+  }
+  
+  .profile-pic {
+      width: 100%; /* Full width */
+      height: auto; /* Maintain aspect ratio */
+      margin-left: 0; /* Centering adjustment */
+  }
+  
+  .cv-button {
+      padding-left: 20px; /* Smaller padding */
+      margin-top: 10px;
+  }
+  .home-content{
+    padding-left: 10px;
+  }
+  
+  /* Timeline Components Adjustments */
+  .cd-horizontal-timeline .events {
+      top: 40px; /* Adjust for smaller screens */
+  }
+  
+  .cd-horizontal-timeline .events-content h2 {
+      font-size: 1.5rem; /* Smaller title font size */
+  }
+  
+  .cd-horizontal-timeline .events-content p {
+      font-size: 1rem; /* Smaller paragraph font size */
+  }
+  
     .hamburger-visible + .content .contact-container {
         margin-left: 20px; /* Add space when hamburger is visible */
     }
     .menu.active ~ .content .contact-container {
         margin-left: 1%; /* Adjust margin when menu is open */
     }
+
 
 }
