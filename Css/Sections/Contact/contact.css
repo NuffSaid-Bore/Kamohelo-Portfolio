@@ -155,7 +155,6 @@ margin-top: 7px;
     .menu.active ~ .content .contact-container {
         margin-left: 1%; 
     }
-
     
     .contact-form {
         width: 50%; 
@@ -164,8 +163,6 @@ margin-top: 7px;
         padding-left: 20px; 
         padding-right: 20px; 
     }
-    
-
 }
 
 /* Mobile devices */
