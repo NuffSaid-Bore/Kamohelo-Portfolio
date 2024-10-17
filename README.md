@@ -1,31 +1,24 @@
-Portfolio Website
--
-Live Website: https://nuffsaid-bore.github.io/Kamohelo-Portfolio/
+# Portfolio Website
 
-HTML CSS & Javascript Project
--
+**Live Website:** [Kamohelo Portfolio](https://nuffsaid-bore.github.io/Kamohelo-Portfolio/)
 
-Simple portfolio website to showcase 
-Html css and Javascript skills. 
-Following Industries coding standards 
-Like code reusability, easily maintainable
-By following object reference for setting up 
-Colors, margins, padding as well as size 
-In general including width and height. 
+## Project Overview
 
-Technologies Used
--
--VS Code
--Chrome, Mozilla Firefox, Microsoft Edge(Testing) 
+This is a simple portfolio website designed to showcase my HTML, CSS, and JavaScript skills. The project adheres to industry coding standards, focusing on code reusability and maintainability. Key design elements, such as colors, margins, padding, width, and height, are organized using object references for easy updates.
 
-Programming Languages
--
--HTML5
--CSS
--Javascript( DOM Elements Manipulation) 
+## Technologies Used
 
-Responsiveness
--
--Responsive for desktop, laptop (personal computer), mobile as well as tablet devices
+- **Code Editor:** Visual Studio Code
+- **Browsers for Testing:** Chrome, Mozilla Firefox, Microsoft Edge
+
+## Programming Languages
+
+- **HTML5**
+- **CSS**
+- **JavaScript** (for DOM manipulation)
+
+## Responsiveness
+
+The website is fully responsive, ensuring a seamless experience across desktop, laptop, mobile, and tablet devices.
 
 

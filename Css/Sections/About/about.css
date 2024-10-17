@@ -523,41 +523,52 @@
   }
   
   .left-container, .right-container {
-      width: 100%; /* Full width on mobile */
+      width: 100%; 
   }
   
   .profile-pic {
-      width: 100%; /* Full width */
-      height: auto; /* Maintain aspect ratio */
-      margin-left: 0; /* Centering adjustment */
+      width: 100%; 
+      height: auto; 
+      margin-left: 0; 
   }
   
   .cv-button {
-      padding-left: 20px; /* Smaller padding */
+      padding-left: 20px; 
       margin-top: 10px;
+  }
+  .viewcv {
+    margin-left: 24%;
+  }
+  .stack-container h1,h2,h3{
+    margin-top: 5px;
+    font-size: 16px;
+  }
+  
+  .cd-horizontal-timeline.loaded {
+    /* show the timeline after events position has been set (using JavaScript) */
+    opacity: 1;
+    padding-bottom: 280px;
   }
   .home-content{
     padding-left: 10px;
   }
-  
-  /* Timeline Components Adjustments */
   .cd-horizontal-timeline .events {
-      top: 40px; /* Adjust for smaller screens */
+      top: 40px; 
   }
   
   .cd-horizontal-timeline .events-content h2 {
-      font-size: 1.5rem; /* Smaller title font size */
+    font-size: 18px;
   }
   
   .cd-horizontal-timeline .events-content p {
-      font-size: 1rem; /* Smaller paragraph font size */
+      font-size: 14px; 
   }
   
     .hamburger-visible + .content .contact-container {
-        margin-left: 20px; /* Add space when hamburger is visible */
+        margin-left: 20px; 
     }
     .menu.active ~ .content .contact-container {
-        margin-left: 1%; /* Adjust margin when menu is open */
+        margin-left: 1%; 
     }
 
 

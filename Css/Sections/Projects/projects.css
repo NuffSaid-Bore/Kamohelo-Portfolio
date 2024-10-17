@@ -114,9 +114,9 @@
     
 .portfolio-items-group {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-    gap: 3px; 
-    padding: 3px;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 5px; 
+    padding: 2px;
 }
 
 .portfolio-item {
@@ -138,6 +138,13 @@
     width: 80px; 
     height: auto;
     border-radius: var(--brd-radius);
+}
+.item-name{
+    font-size: 10px;
+    text-align: center;
+}
+.item-category {
+    font-size: 10px;
 }
     .hamburger-visible + .content .project-container {
         margin-left: 20px; /* Add space when hamburger is visible */
