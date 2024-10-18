@@ -134,8 +134,7 @@ margin-top: 7px;
         border-color: var(--clr-primary);
     }
     .contact-btn {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-right: 180px;
     }
     .form-content h2,.form-content p {
         text-align: center;
