@@ -20,6 +20,7 @@
     gap: 10px; 
     justify-content: center;
     margin: 20px;
+    z-index: 1;
 }
 
 .grid-item {
@@ -92,6 +93,7 @@ margin-top: 7px;
         transition: right 0.3s ease;
         padding-left: 40px;
         padding-right: 40px;
+        z-index: 10;
     }
     
     .contact-form.open {

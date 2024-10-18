@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamohelo Bore</title>
     <link rel="stylesheet" href="./Css/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
     <link rel="icon" href="./images/icon.png" type="image/x-icon">
 </head>
 <body>
@@ -16,11 +17,11 @@
         <nav class="menu">
             <img src="./images/Logo.png" alt="Logo" class="logo">
             
-            <ul id="menuList" class="hidden">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul id="menuList">
+                <li><a href="#home" class="active"><i class="bx bx-home"></i><span class="menu-text">Home</span></a></li>
+                <li><a href="#about"><i class="bx bx-info-circle"></i><span class="menu-text">About</span></a></li>
+                <li><a href="#projects"><i class="bx bx-briefcase"></i><span class="menu-text">Portfolio</span></a></li>
+                <li><a href="#contact"><i class="bx bx-envelope"></i><span class="menu-text">Contact</span></a></li>
             </ul>
         </nav>
         <!--End of Nav-->
@@ -37,11 +38,11 @@
                         <h3>I am <span class="multiple-text"></span></h3>
                         <p>My hobbies include Computer science and Video Games. This Website is just a showcase of my programming skills. You can find some inspiration for your own too, or else you can hire me as a Front-end/Back-end Developer for your website!</p>
                         <div class="social-media">
-                            <a href="https://www.instagram.com/Mochpxt__" target="_blank" style="--i:1"><i class='bx bxl-instagram-alt'></i></a>
-                            <a href="https://wa.me/+27748632478" target="_blank" style="--i:2"><i class='bx bxl-whatsapp'></i></a>
-                            <a href="https://discordapp.com/users/mochpxt_67697" target="_blank" style="--i:3"><i class='bx bxl-discord-alt'></i></a>
-                            <a href="https://www.github.com/NuffSaid-Bore" target="_blank" style="--i:4"><i class='bx bxl-github'></i></a>
-                            <a href="https://codepen.io/Kamohelo-Bore" target="_blank" style="--i:5"><i class='bx bxl-codepen'></i></a>
+                            <a href="https://www.instagram.com/Mochpxt__" target="_blank" style="--i:1"><i class="bx bxl-instagram-alt"></i></a>
+                            <a href="https://wa.me/+27748632478" target="_blank" style="--i:2"><i class="bx bxl-whatsapp"></i></a>
+                            <a href="https://discordapp.com/users/mochpxt_67697" target="_blank" style="--i:3"><i class="bx bxl-discord-alt"></i></a>
+                            <a href="https://www.github.com/NuffSaid-Bore" target="_blank" style="--i:4"><i class="bx bxl-github"></i></a>
+                            <a href="https://codepen.io/Kamohelo-Bore" target="_blank" style="--i:5"><i class="bx bxl-codepen"></i></a>
                         </div>
                         <a href="mailto:borekamohelo@gmail.com?subject=You Have Job Oppotunity From Portfolio" class="btn homebtn">Hire me</a>
                     </div>
@@ -187,76 +188,113 @@
                             <!-- End of TimeLine -->
                     </div>
                 </div>
+                </div>
             </section>
             <!--About Section Ends Here-->
 
             <!--Portfolio Section Starts here-->
             <section id="projects" class="section">
                 <div class="project-container">
-                    <h1 class="section-heading">Portfolio</h1>
-                    <h4 class="section-sub-heading">My Works</h4>
-                    
-                    <ul class="filter-box">
-                        <li class="filter-item active">All</li>
-                        <li class="filter-item">UI/UX</li>
-                        <li class="filter-item">Mobile</li>
-                        <li class="filter-item">Web</li>
-                    </ul>
-                    <br>
-            
-                    <div class="portfolio-items-group">
-                        <div class="portfolio-item active">
-                            <img src="./images/tertris-game-mobile.png" alt="image" class="item-img">
-                            <h4 class="item-name">Tetris Game</h4>
-                            <div class="item-icon">
-                                <ion-icon name="volume-high"></ion-icon>
-                            </div>
-                            <div class="item-category">Mobile</div>
-                        </div>
-
-                        <div class="portfolio-item active">
-                            <img src="./images/debtor-mobile.png" alt="image" class="item-img">
-                            <h4 class="item-name">Debtor</h4>
-                            <div class="item-icon">
-                                <ion-icon name="volume-high"></ion-icon>
-                            </div>
-                            <div class="item-category">Mobile</div>
-                        </div>
-            
-                        <div class="portfolio-item active">
-                            <img src="./images/ui ux-smart-mall.jpeg" alt="image" class="item-img">
-                            <h4 class="item-name">Smart Mall</h4>
-                            <div class="item-icon">
-                                <ion-icon name="film"></ion-icon>
-                            </div>
-                            <div class="item-category">UI/UX</div>
-                        </div>
-
-                        <div class="portfolio-item active">
-                            <img src="./images/website-branding.jpg" alt="image" class="item-img">
-                            <h4 class="item-name">Personal Branding</h4>
-                            <div class="item-icon">
-                                <ion-icon name="film"></ion-icon>
-                            </div>
-                            <div class="item-category">Web</div>
-                        </div>
-                        <div class="portfolio-item active">
-                            <img src="./images/website-saku.png" alt="image" class="item-img">
-                            <h4 class="item-name">Saku Construction</h4>
-                            <div class="item-icon">
-                                <ion-icon name="film"></ion-icon>
-                            </div>
-                            <div class="item-category">Web</div>
-                        </div>
-                        <div class="portfolio-item active">
-                            <img src="./images/smartmockups_m28pgm56.jpg" alt="image" class="item-img">
-                            <h4 class="item-name">Radio Doc</h4>
-                            <div class="item-icon">
-                                <ion-icon name="film"></ion-icon>
-                            </div>
-                            <div class="item-category">Web</div>
-                        </div>
+                    <!--Portfolio Filter Start Here-->
+                    <div class="main-content">
+                        <div uk-filter="target: .js-filter">
+                      
+                          <ul class="uk-navbar-nav">
+                              <li class="uk-active" uk-filter-control><a href="#">All</a></li>
+                              <li uk-filter-control="[data-num='1']"><a href="#">UI / UX</a></li>
+                              <li uk-filter-control="[data-num='2']"><a href="#">MOBILE</a></li>
+                              <li uk-filter-control="[data-num='3']"><a href="#">WEB</a></li>
+                          </ul>
+                      
+                          <ul class="img-gallery-container js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid>
+                              <li data-num="2">
+                                  <img src="./images/tertris-game-mobile.png" alt="" class="img-gal">
+                                  <div class="float-gallery-content">
+                                      <div class="content uk-text-left">
+                                          <span class="highlight uk-block">Gaming | Mobile Apps</span>
+                                          <a href="https://github.com/NuffSaid-Bore/game-boy-tetris">Tetris Mobile Game</a>
+                                      </div>
+                                      <div class="content-btn">
+                                          <a href="https://github.com/NuffSaid-Bore/game-boy-tetris"><button type="button">
+                                            &#8594;
+                                        </button></a>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li data-num="2">
+                                  <img src="./images/debtor-mobile.png" alt="" class="img-gal">
+                                <div class="float-gallery-content">
+                                      <div class="content uk-text-left">
+                                          <span class="highlight uk-block">Finance | Mobile Apps</span>
+                                          <a href="https://github.com/NuffSaid-Bore/debtor_collection">Debtor</a>
+                                      </div>
+                                      <div class="content-btn">
+                                        <a href="https://github.com/NuffSaid-Bore/debtor_collection"><button type="button">
+                                            &#8594;
+                                        </button></a>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li data-num="1">
+                                  <img src="./images/ui ux-smart-mall.jpeg" alt="" class="img-gal">
+                                <div class="float-gallery-content">
+                                      <div class="content uk-text-left">
+                                          <span class="highlight uk-block">UI /UX | Wire-Framing</span>
+                                          <a href="https://www.figma.com/design/KcJftt1okEejUgy3IT15lm/SAPO-E-Commerce-(Smart-Mall)-wireframes?node-id=0-1&node-type=canvas&t=poVmO6BI1kFEpSs1-0">Smart Mall</a>
+                                      </div>
+                                      <div class="content-btn">
+                                        <a href="https://www.figma.com/design/KcJftt1okEejUgy3IT15lm/SAPO-E-Commerce-(Smart-Mall)-wireframes?node-id=0-1&node-type=canvas&t=poVmO6BI1kFEpSs1-0"><button type="button">
+                                            &#8594;
+                                        </button></a>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li data-num="3">
+                                  <img src="./images/website-branding.jpg" alt="" class="img-gal">
+                                <div class="float-gallery-content">
+                                      <div class="content uk-text-left">
+                                          <span class="highlight uk-block">Personal | Branding</span>
+                                          <a href="https://nuffsaid-bore.github.io/CODSOFT/Portfolio/">Creative Web Design</a>
+                                      </div>
+                                      <div class="content-btn">
+                                        <a href="https://nuffsaid-bore.github.io/CODSOFT/Portfolio/"><button type="button">
+                                            &#8594;
+                                        </button></a>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li data-num="3">
+                                  <img src="./images/website-saku.png" alt="" class="img-gal">
+                                <div class="float-gallery-content">
+                                      <div class="content uk-text-left">
+                                          <span class="highlight uk-block">Business | Branding</span>
+                                          <a href="https://sakugrp.co.za/projects/">Saku Construction</a>
+                                      </div>
+                                      <div class="content-btn">
+                                        <a href="https://sakugrp.co.za/projects/"><button type="button">
+                                            &#8594;
+                                        </button></a>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li data-num="3">
+                                  <img src="./images/smartmockups_m28pgm56.jpg" alt="" class="img-gal">
+                                <div class="float-gallery-content">
+                                      <div class="content uk-text-left">
+                                          <span class="highlight uk-block">Podcast | Ecommerce</span>
+                                          <a href="https://sakugrp.co.za/projects/about/">Radio Doc</a>
+                                      </div>
+                                      <div class="content-btn">
+                                        <a href="https://sakugrp.co.za/projects/about/"><button type="button">
+                                            &#8594;
+                                        </button></a>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
                     </div>
+                    <!--Portfolio Filter ends Here-->
                     <a href="https://www.github.com/NuffSaid-Bore?tab=repositories" class="btn project-btn">For More Projects</a>
                 </div>
             </section> 
@@ -277,12 +315,12 @@
                             <br>
                             <p>I usually respond within 48 hours. Thanks for reaching out, and I'll get back to you soon!</p>
                             <br>
-                            <form>
+                            <form action="https://formspree.io/f/myzyyqgo" method="POST">
                                 <label for="email">Email</label>
                                 <input type="email" id="email" required>
                                 <br>
                                 <label for="message">Message</label>
-                                <textarea id="message" required></textarea>
+                                <textarea name="message" id="message" required></textarea>
                                 <br>
     
                                 <button type="submit" class="btn contact-btn">Send</button>
@@ -305,10 +343,14 @@
         <!--End of Body-->
     </div>
     <!--End of Body COntainer-->
-        <footer class="footer">
-            <p>Copyright &copy; 2024 Kamohelo Bore <a rel="nofollow" href="https://Kamohelo-bore-portfolio.kesug.com">Kamohelo Bore</a></p>
-        </footer>
+    <footer class="footer">
+        <p>Copyright &copy; <span id="currentYear"></span>
+            <a rel="nofollow" href="https://Kamohelo-bore-portfolio.kesug.com">All right reserved by Kamohelo Bore</a>
+        </p>
+    </footer>    
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
         <script src="./Scripts/script.js"></script>
 </body>
 </html>

@@ -9,6 +9,9 @@ const openForm = document.getElementById('openForm');
 const contactForm = document.getElementById('contactForm');
 const closeForm = document.getElementById('closeForm');
 
+// Get the current year and set it in the footer
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
 menuLinks.forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
