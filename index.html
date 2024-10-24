@@ -11,7 +11,7 @@
 <body>
     <!--Body Container Starts Here-->
     <div class="container">
-        <div class="hamburger hidden" id="hamburger">&#9776;</div>
+        <div class="hamburger hidden" id="hamburger"><i class='bx bx-menu-alt-right'></i></div>
         <!--Navigation Menu to be displayed on the left hand side of the screen-->
         <nav class="menu">
             <img src="./images/Logo.png" alt="Logo" class="logo">
@@ -25,6 +25,26 @@
         </nav>
         <!--End of Nav-->
 
+        <!--Chat Bot -->
+            <div class="chatbot">
+                <header>
+                    <h2>Chatbot</h2>
+                </header>
+                <ul class="chatbox">
+                    <li class="chat incoming">
+                        <i class='bx bxs-bot'></i>
+                        <p>Hi there! 👋 <br> How can i help you today?</p>
+                    </li>
+                    <li class="chat outgoing">
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </li>
+                </ul>
+                <div class="chat-input">
+                    <textarea class="chat-textrarea" name="chat-input" placeholder="Type your message here..." required></textarea>
+                        <i id="send-btn" class="bx bx-send send" ></i>
+                </div>
+            </div>
+        <!--End of Chat Bot-->
         <!--Body Starts here Divided by Sections According to the menu/Navigation Menu-->
         <div class="content">
             <!--Home Section Starts Here-->
@@ -352,6 +372,6 @@
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
-        <script src="./Scripts/script.js"></script>
+        <script type="module" src="./Scripts/script.js"></script>
 </body>
 </html>

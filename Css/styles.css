@@ -2,9 +2,10 @@
 @import url("./Sections/About/about.css");
 @import url("./Sections/Contact/contact.css");
 @import url("./Sections/Projects/projects.css");
+@import url("./Sections/Chatbot/chatbot.css");
 
 :root {
-    --clr-primary:#7F4BD2;
+    --clr-primary:#a772fc;
     --clr-primary-lighter: #5d526d;
     --clr-secondary: rgba(0, 0, 0, 0.5);
     --clr-contact-bg: rgba(10, 10, 10, 0.8);
@@ -107,7 +108,6 @@ body {
     padding: 20px 0px 20px 0px;
 }
 
-
 .section.active {
     left: 0;
 }
@@ -120,12 +120,20 @@ body {
     color: var(--clr-primary);
 }
 
+
 .footer {
     background-color: var(--clr-secondary);
     color: var(--clr-default);
     text-align: center;
     padding: 10px 0;
     width: var(--sz-default);
+}
+.footer a {
+    color: var(--clr-default);
+}
+
+.footer a:hover {
+    color: var(--clr-primary);
 }
 
 @media (max-width: 768px) {
