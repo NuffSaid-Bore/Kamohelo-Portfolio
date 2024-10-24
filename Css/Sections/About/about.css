@@ -123,6 +123,7 @@
 .cd-horizontal-timeline {
   opacity: 0;
   margin-top: 10px;
+  z-index: 1;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   transition: opacity 0.2s;
