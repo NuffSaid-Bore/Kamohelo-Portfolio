@@ -83,6 +83,14 @@
     color: var(--clr-default);
     padding: 16px 15px 16px 0;
 }
+.chat-textrarea::placeholder {
+    color: var(--clr-default);
+    opacity: 0.9;
+    padding-left: 10px;
+}
+/* .chat-input .chat-textrarea:valid ~ .send {
+    visibility: ;
+} */
 .send {
     align-self: flex-end;
     margin-bottom: 15px;
@@ -92,7 +100,10 @@
     border-radius: var(--brd-radius);
     color: var(--clr-default);
     cursor: pointer;
-    
+    transition: background 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: calc(.2s * var(--i) + 2s);
+    visibility:  hidden;
     
 }
 /* End of Chatbot Style*/
