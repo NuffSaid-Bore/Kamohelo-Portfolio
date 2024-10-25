@@ -10,6 +10,7 @@ This is a simple portfolio website designed to showcase my HTML, CSS, and JavaSc
 
 - **Code Editor:** Visual Studio Code
 - **Browsers for Testing:** Chrome, Mozilla Firefox, Microsoft Edge
+- **Live Server:** Running the html on the live server to see changes in real time
 
 ## Programming Languages
 
@@ -23,7 +24,23 @@ The website is fully responsive, ensuring a seamless experience across desktop, 
 
 
 ## How to Use
-- **Clone the Repository**
 
-git clone https://github.com/NuffSaid-Bore/Kamohelo-Portfolio.git
-cd portfolio
+1. **Clone the Repository**:
+       - **Create a folder **
+         On your desktop or your desired location create a folder
+         1.1 Open your terminal either git bash/ powershell or cmd.
+         1.2 To open cmd navigate to thesearch icon on your taskbar on the left hand side and type cmd.
+         1.3 for the below command to work make sure you have git installed on your local machine.
+            ```bash
+                git --version
+        This command should tell you the version of git you have installed if installed at all or something like command not recognized if not installed.
+        if you don't have use the link below to download git and install on your local machine.
+            ```bash
+                https://git-scm.com/downloads/win
+        Repeat the command on 1.3 once the installation is complete
+        1.4 In your cmd terminal or desired terminal copy and past the below git command.
+            ```bash
+                git clone https://github.com/NuffSaid-Bore/Kamohelo-Portfolio.git
+                cd Kamohelo-Portfolio
+                code . 
+        The code . command will open the project in vs code
