@@ -27,9 +27,10 @@ const responses = {
     "Where are you currently located": "I am currently located in Johannesburg, Gauteng",
     "What services do you offer": "I offer web development, web design,mobile dev , mobile design, and SEO services.",
     "Can you tell me about yourself": "I'm a software developer with over 2 years in web dev and over 3 years in mobile app dev currently based in Johannesburg Gauteng",
-    "How can I contact you": "You can reach me through the contact form on this website or my personal email address: borekamohelo@gmail.com",
+    "How can I contact you": "You can reach me through the contact form on this website or via a phone call 0748632478",
     "What projects have you worked on": "I have worked on various web development projects, Mobile Appliacation Projects also including design. For more visit: https://github.com/NuffSaid-Bore?tab=repositories",
     "What is your experience": "I have several years of experience in web development, mobile development and recenty started with design.",
+    "Speak to an agent": "Connecting you to an agent. You’ll receive a response soon!",
     "Goodbye": "Goodbye! Have a great day!",
 };
 
@@ -38,6 +39,7 @@ const optionResponses = [
     { text: "Can you tell me about yourself?", value: "Can you tell me about yourself?" },
     { text: "How can I contact you?", value: "How can I contact you?" },
     { text: "Where are you currently located?", value: "How can I contact you?" },
+    { text: "Speak to an agent?", value: "Speak to an agent?" },
     { text: "Goodbye", value: "Goodbye" }
 ];
 
@@ -83,12 +85,9 @@ const handleChat = () => {
     chatInput.value = '';
     chatbox.scrollTo(0, chatbox.scrollHeight);
 
-    // Show typing indicator
     typingIndicator.classList.remove("hidden");
-    // console.log("Showing typing indicator");
-
-    // Determine the bot's response
-    let botResponse = "I'm sorry, I don't understand that."; // Default response
+    
+    let botResponse = "I'm sorry, I don't understand that.";
     let understood = false;
 
     for (const question in responses) {
@@ -99,32 +98,27 @@ const handleChat = () => {
         }
     }
 
-    // Simulate typing delay
     setTimeout(() => {
         typingIndicator.classList.add("hidden");
-        // console.log("Hiding typing indicator");
 
-        // Append the bot response
         chatbox.appendChild(createChatLi(botResponse, "incoming"));
 
-        // Show options if the response was not understood
         if (!understood) {
-            displayOptions(); // Show options if not understood
+            displayOptions();
         }
 
         chatbox.scrollTo(0, chatbox.scrollHeight);
-    }, 2000);
+    }, 4000);
 }
 
 const handleChatWithOption = (selectedOption) => {
-    chatInput.value = selectedOption; // Option selected fills the input
-    handleChat(); // Call handleChat to process the selected option
+    chatInput.value = selectedOption;
+    handleChat();
 }
-// Add this event listener to handle the Enter key
 chatInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
-        event.preventDefault(); // Prevent the default action (like a new line)
-        handleChat(); // Call the handleChat function to process the input
+        event.preventDefault();
+        handleChat();
     }
 });
 
