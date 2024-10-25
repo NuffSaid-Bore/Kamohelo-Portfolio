@@ -1,32 +1,133 @@
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input i");
 const chatbox = document.querySelector(".chatbox");
+const typingIndicator = document.querySelector(".typing");
 const chatbotToggle = document.querySelector(".chat-toggle");
+const chatCloseButton = document.querySelector(".close-icon");
 
 let userMessage;
 
-const createChatLi = (message , className) => {
+const responses = {
+    "Hi": "Hello! How can I assist you today?",
+    "Hello":"Hi! How can I assist you today?",
+    "Eita": "Hello! How can I assist you today?",
+    "Huzit": "Ola! How can I assist you today?",
+    "Howzit": "Exe! How can I assist you today?",
+    "Ola": "Sho! How can I assist you today?",
+    "Exe": "Ola! How can I assist you today?",
+    "Fede": "Sho! How can I assist you today?",
+    "How are you": "I am doing great how about you?",
+    "How are you doing": "I am doing great how about you?",
+    "How are you feeling": "I am doing great how about you?",
+    "I am doing great": "Glad to know! How can i be of assistance today?",
+    "I am doing well": "Glad to know! How can i be of assistance today?",
+    "I'm good": "Glad to know! How can i be of assistance today?",
+    "I am okay": "Glad to know! How can i be of assistance today?",
+    "I'm okay and yourself": "Glad to know! How can i be of assistance today?",
+    "Where are you currently located": "I am currently located in Johannesburg, Gauteng",
+    "What services do you offer": "I offer web development, web design,mobile dev , mobile design, and SEO services.",
+    "Can you tell me about yourself": "I'm a software developer with over 2 years in web dev and over 3 years in mobile app dev currently based in Johannesburg Gauteng",
+    "How can I contact you": "You can reach me through the contact form on this website or my personal email address: borekamohelo@gmail.com",
+    "What projects have you worked on": "I have worked on various web development projects, Mobile Appliacation Projects also including design. For more visit: https://github.com/NuffSaid-Bore?tab=repositories",
+    "What is your experience": "I have several years of experience in web development, mobile development and recenty started with design.",
+    "Goodbye": "Goodbye! Have a great day!",
+};
+
+const optionResponses = [
+    { text: "What services do you offer?", value: "What services do you offer?" },
+    { text: "Can you tell me about yourself?", value: "Can you tell me about yourself?" },
+    { text: "How can I contact you?", value: "How can I contact you?" },
+    { text: "Where are you currently located?", value: "How can I contact you?" },
+    { text: "Goodbye", value: "Goodbye" }
+];
+
+const createChatLi = (message, className) => {
     const chatli = document.createElement("li");
     chatli.classList.add("chat", className);
-
-    let chatContent = className === "outgoing" ? `<p>${message}</p>` : ` <i class='bx bxs-bot'></i><p>${message}</p>`;
+    let chatContent = className === "outgoing" 
+        ? `<p>${message}</p>` 
+        : `<i class='bx bxs-bot'></i><p>${message}</p>`;
     chatli.innerHTML = chatContent;
     return chatli;
 }
-const handleChat = () => {
-    userMessage = chatInput.value.trim();
-    if(!userMessage) return;
-        chatbox.appendChild(createChatLi(userMessage,"outgoing"));
-        chatInput.value = '';
-        chatbox.scrollTo(0, chatbox.scrollHeight);
 
-        setTimeout(() =>{
-            chatbox.appendChild(createChatLi("Typing...","incoming"));
-            chatbox.scrollTo(0, chatbox.scrollHeight);
-        }, 800);
-    
+const createOptionLi = (option) => {
+    const optionLi = document.createElement("li");
+    optionLi.classList.add("option");
+    optionLi.innerHTML = `<div class="option-btn">${option.text}</div>`;
+    return optionLi;
 }
 
+const displayOptions = () => {
+    const optionsContainer = document.createElement("ul");
+    optionsContainer.classList.add("options");
+
+    optionResponses.forEach(option => {
+        const optionLi = createOptionLi(option);
+        optionsContainer.appendChild(optionLi);
+
+        optionLi.addEventListener("click", () => {
+            handleChatWithOption(option.value);
+        });
+    });
+
+    chatbox.appendChild(optionsContainer);
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+}
+
+const handleChat = () => {
+    userMessage = chatInput.value.trim();
+    if (!userMessage) return;
+
+    chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+    chatInput.value = '';
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+
+    // Show typing indicator
+    typingIndicator.classList.remove("hidden");
+    // console.log("Showing typing indicator");
+
+    // Determine the bot's response
+    let botResponse = "I'm sorry, I don't understand that."; // Default response
+    let understood = false;
+
+    for (const question in responses) {
+        if (userMessage.toLowerCase().includes(question.toLowerCase())) {
+            botResponse = responses[question];
+            understood = true;
+            break;
+        }
+    }
+
+    // Simulate typing delay
+    setTimeout(() => {
+        typingIndicator.classList.add("hidden");
+        // console.log("Hiding typing indicator");
+
+        // Append the bot response
+        chatbox.appendChild(createChatLi(botResponse, "incoming"));
+
+        // Show options if the response was not understood
+        if (!understood) {
+            displayOptions(); // Show options if not understood
+        }
+
+        chatbox.scrollTo(0, chatbox.scrollHeight);
+    }, 2000);
+}
+
+const handleChatWithOption = (selectedOption) => {
+    chatInput.value = selectedOption; // Option selected fills the input
+    handleChat(); // Call handleChat to process the selected option
+}
+// Add this event listener to handle the Enter key
+chatInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Prevent the default action (like a new line)
+        handleChat(); // Call the handleChat function to process the input
+    }
+});
 
 sendChatBtn.addEventListener("click", handleChat);
 chatbotToggle.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+chatCloseButton.addEventListener("click", () => document.body.classList.remove("show-chatbot"));

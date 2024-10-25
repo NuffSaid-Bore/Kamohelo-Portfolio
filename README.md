@@ -22,3 +22,8 @@ This is a simple portfolio website designed to showcase my HTML, CSS, and JavaSc
 The website is fully responsive, ensuring a seamless experience across desktop, laptop, mobile, and tablet devices.
 
 
+## How to Use
+- **Clone the Repository**
+
+git clone https://github.com/NuffSaid-Bore/Kamohelo-Portfolio.git
+cd portfolio

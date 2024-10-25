@@ -6,12 +6,15 @@
 
 :root {
     --clr-primary:#a772fc;
+    --clr-primary-dark:#6d13ff;
+    --clr-primary-light:#8840fc;
     --clr-primary-lighter: #5d526d;
     --clr-secondary: rgba(0, 0, 0, 0.5);
     --clr-contact-bg: rgba(10, 10, 10, 0.8);
     --clr-bg: #000;
     --clr-hamburger-bg:rgba(0,0,0,0);
     --clr-default: #fff;
+    --clr-grey: #f2f2f2;
     --ff-primary: Arial, sans-serif;
     --brd-radius: 15px;
     --brd-radius-primary: 8px;

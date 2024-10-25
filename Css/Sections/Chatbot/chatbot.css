@@ -32,7 +32,8 @@
     z-index: 10;
     right: 40px;
     bottom: 100px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     transform: scale(0.5);
     opacity: 0;
     pointer-events: none;
@@ -47,12 +48,37 @@
 }
 
 .chatbot header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     background-color: var(--clr-primary);
     padding: 16px 0;
     text-align: center;
     border-top-left-radius: var(--brd-radius);
     border-top-right-radius: var(--brd-radius);
+}
+.header-div {
+    display: flex; 
+    align-items: center;
+} 
+.header-div img {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    margin-left: 10px;
+} 
+.online-dot{
+    display: inline-block; 
+    width: 10px; 
+    height: 10px; 
+    background-color: green; 
+    border-radius: 50%; 
+    margin-left: 5px;
+}
+.online-text {
+    margin-left: 5px;
+    color: var(--clr-default);
 }
 .chatbot header i {
     position: absolute;
@@ -94,15 +120,17 @@
 .chatbox .chat p{
     color: var(--clr-default);
     font-size: 0.9rem;
+    font-weight: 600;
     max-width: 70%;
     padding: 12px 16px;
     border-radius:  10px 10px 0 10px;
     background:  var(--clr-primary);
 }
 .chatbox .incoming p {
-    color: #000;
-    background:  #f2f2f2;
-    border-radius:  10px 10px 10 0;
+    color: var(--clr-bg);
+    background:  var(--clr-grey);
+    border-radius:  10px 10px 10px 0;
+    font-weight: 600;
 }
 .chat-input {
     position: absolute;
@@ -111,7 +139,7 @@
     display: flex;
     gap: 5px;
     background: var(--clr-primary);
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--clr-grey);
 }
 
 .chat-textrarea {
@@ -125,12 +153,13 @@
     resize: none;
     background: var(--clr-primary);
     color: var(--clr-default);
-    padding: 16px 15px 16px 0;
+    padding: 16px 15px 16px 16px;
 }
 .chat-textrarea::placeholder {
     color: var(--clr-default);
     opacity: 0.9;
     padding-left: 10px;
+    font-weight: 600;
 }
 .chat-input .chat-textrarea:valid ~ .send {
     visibility: visible;
@@ -150,16 +179,114 @@
     visibility:  hidden;
     
 }
+.online-div {
+    display: flex; 
+    align-items: start; 
+    margin-top: 2px;
+}
+.header-body-div { 
+    display: flex; 
+    flex-direction: column;
+}
+.online-name {
+    padding-left: 20px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--clr-default);
+}
+.options {
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: var(--clr-default);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.option {
+    margin: 5px 0;
+}
+
+.option-btn {
+    background-color: var(--clr-primary);
+    color: var(--clr-default);
+    border: none;
+    border-radius: var(--brd-radius-primary);
+    padding: 10px;
+    cursor: pointer;
+    width: 100%; 
+    text-align: left;
+}
+
+.option-btn:hover {
+    background-color: var(--clr-primary-dark);
+}
+
+.typing {
+    align-items: center;
+    display: flex;
+    height: 17px;
+    margin-right: 60px;
+  }
+  .typing .dot {
+    animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+    background-color: var(--clr-primary);
+    border-radius: 50%;
+    height: 7px;
+    margin-right: 4px;
+    vertical-align: middle;
+    width: 7px;
+    display: inline-block;
+  }
+  .hidden {
+    display: none;
+}
+  .typing .dot:nth-child(1) {
+    animation-delay: 200ms;
+  }
+  .typing .dot:nth-child(2) {
+    animation-delay: 300ms;
+  }
+  .typing .dot:nth-child(3) {
+    animation-delay: 400ms;
+  }
+  .typing .dot:last-child {
+    margin-right: 0;
+  }
+  
+  @keyframes mercuryTypingAnimation {
+    0% {
+      transform: translateY(0px);
+      background-color:var( --clr-primary-dark); 
+    }
+    28% {
+      transform: translateY(-7px);
+      background-color:var( --clr-primary-light);
+    }
+    44% {
+      transform: translateY(0px);
+      background-color: var( --clr-primary); 
+    }
+  }
 /* End of Chatbot Style*/
 
 /* Responsive*/
 @media(max-width: 480px){
     .chatbot {
-        right: 0;
-        bottom: 0;
-        height: 100%;
+        background-color:  var(--clr-default);
+        position: fixed;
+        z-index: 10;
+        right: 10px;
+        bottom: 100px;
         width: 100%;
-        border-radius: 0;
+        max-width: 250px;
+        transform: scale(0.5);
+        opacity: 0;
+        pointer-events: none;
+        overflow: hidden;
+        border-radius: var(--brd-radius);
+        box-shadow:  0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
     }
 
     .chatbot .chatbox {
@@ -167,6 +294,45 @@
     }
     .chatbot header i{
         display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .chat-toggle {
+        background-color:  var(--clr-primary);
+        position: fixed;
+        right: 20px;
+        bottom: 33px;
+        height: 35px;
+        width: 35px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--clr-default);
+    }
+
+    .header-div img {
+        width: 40px; 
+        height: 40px; 
+        border-radius: 50%;
+        margin-left: 10px;
+    } 
+    .online-dot{
+        margin-left: 5px;
+    }
+    .online-text {
+        margin-left: 10px;
+        font-size: 0.75rem;
+        color: var(--clr-default);
+    }
+    .chat-textrarea::placeholder {
+        font-size: 0.75rem;
+    }
+    .online-name {
+        font-size: 0.85rem;
     }
 
 }

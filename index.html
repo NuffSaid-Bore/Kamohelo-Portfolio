@@ -18,7 +18,7 @@
             
             <ul id="menuList">
                 <li><a href="#home" class="active"><i class="bx bx-home"></i><span class="menu-text">Home</span></a></li>
-                <li><a href="#about"><i class="bx bx-info-circle"></i><span class="menu-text">About</span></a></li>
+                <li><a href="#about"><i class="bx bx-user"></i><span class="menu-text">About</span></a></li>
                 <li><a href="#projects"><i class="bx bx-briefcase"></i><span class="menu-text">Portfolio</span></a></li>
                 <li><a href="#contact"><i class="bx bx-envelope"></i><span class="menu-text">Contact</span></a></li>
             </ul>
@@ -34,8 +34,17 @@
         <!--Chat Bot -->
             <div class="chatbot">
                 <header>
-                    <h2>Chatbot</h2>
-                    <i class='bx bx-x'></i>
+                       <div class="header-div">
+                            <img src="./images/robot-image.png" alt="Profile Picture" >
+                            <div class="header-body-div">
+                                <span class="online-name">Artisan Assistant</span>
+                                <div class="online-div" >
+                                    <span class="online-dot"></span>
+                                    <span class="online-text">I'm happy to help</span>
+                            </div> 
+                                </div>
+                        </div>
+                    <i class='bx bx-x close-icon'></i>
                 </header>
                 <ul class="chatbox">
                     <li class="chat incoming">
@@ -46,6 +55,12 @@
                         <p>Lorem ipsum dolor sit amet consectetur.</p>
                     </li> -->
                 </ul>
+                
+                <div class="typing hidden" id="typingIndicator">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
                 <div class="chat-input">
                     <textarea class="chat-textrarea" name="chat-input" placeholder="Type your message here..." required></textarea>
                         <i id="send-btn" class="bx bx-send send" ></i>
@@ -350,8 +365,10 @@
                                 <label for="message">Message</label>
                                 <textarea name="message" id="message" required></textarea>
                                 <br>
-    
-                                <button type="submit" class="btn contact-btn">Send</button>
+                                <div class="button-holder">
+                                    <button type="submit" class="btn contact-btn">Send</button>
+                                </div>
+                                
                                 <br>
                                 <br>
                             </form>
