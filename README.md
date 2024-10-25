@@ -23,20 +23,41 @@ This is a simple portfolio website designed to showcase my HTML, CSS, and JavaSc
 The website is fully responsive, ensuring a seamless experience across desktop, laptop, mobile, and tablet devices.
 
 
-## How to Use
+## Kamohelo Portfolio Setup Guide
 
-1. **Clone the Repository**:
-              - **Create a folder **
-                On your desktop or your desired location create a folder
-                1.1 Open your terminal either git bash/ powershell or cmd.
-                1.2 To open cmd navigate to thesearch icon on your taskbar on the left hand side and type cmd.
-                1.3 for the below command to work make sure you have git installed on your local machine.
-     ```bash
-          git --version
-This command should tell you the version of git you have installed if installed at all or something like command not recognized if not installed. if you don't have use the link below to download git and install on your local machine.
-   ```bash
-        https://git-scm.com/downloads/win
-       ```bash
-       git clone https://github.com/NuffSaid-Bore/Kamohelo-Portfolio.git
-       cd Kamohelo-Portfolio
-       code .
+Follow these steps to set up the Kamohelo Portfolio project on your local machine.
+  - Open your terminal either git bash/ powershell or cmd.
+  - To open cmd navigate to thesearch icon on your taskbar on the left hand side and type cmd.
+
+### Step 1: Check if Git is Installed
+
+Run the following command to check if Git is installed:
+
+```bash
+git --version
+```
+### Step 2: Install Git (if not already installed)
+- If you don't have Git installed, download it from the official Git website:
+```bash
+[Download Git for Windows](https://git-scm.com/downloads/win)
+```
+  - After downloading, follow the installation instructions on the website to install Git.
+
+### Step 3: Clone the Repository
+```bash
+git clone https://github.com/NuffSaid-Bore/Kamohelo-Portfolio.git
+```
+  - This will create a local copy of the repository on your machine.
+### Step 4: Navigate to the Project Directory
+  - Change to the project directory with the following command:
+```bash
+cd Kamohelo-Portfolio
+```
+### Step 5: Open the Project in Visual Studio Code
+  - To open the project in Visual Studio Code, run:
+```bash
+code .
+```
+
+
+
