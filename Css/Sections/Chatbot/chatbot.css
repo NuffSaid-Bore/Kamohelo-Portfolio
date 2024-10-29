@@ -1,6 +1,6 @@
 /* Chatbot Styles*/
 .chat-toggle {
-    background-color:  var(--clr-primary);
+    background-color:  var(--clr-primary-dark);
     position: fixed;
     right: 40px;
     bottom: 35px;
