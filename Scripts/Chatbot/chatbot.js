@@ -23,6 +23,7 @@ const responses = {
     "I am doing well": "Glad to know! How can i be of assistance today?",
     "I'm good": "Glad to know! How can i be of assistance today?",
     "I am okay": "Glad to know! How can i be of assistance today?",
+    "Where are you from": "I am originally from Free State, Bloemfontein but currently in Johannesburg",
     "I'm okay and yourself": "Glad to know! How can i be of assistance today?",
     "Where are you currently located 🏠": "I am currently located in Johannesburg, Gauteng",
     "What 💻 services do you offer": "I offer web development, web design,mobile dev , mobile design, and SEO services.",
@@ -47,9 +48,14 @@ const optionResponses = [
 const createChatLi = (message, className) => {
     const chatli = document.createElement("li");
     chatli.classList.add("chat", className);
+    const currentTime = new Date();
+    const hours = currentTime.getHours() % 12 || 12;
+    const minutes = currentTime.getMinutes().toString().padStart(2, "0");
+    const ampm = currentTime.getHours() >= 12 ? "PM" : "AM";
+    const formattedTime = `${hours}:${minutes} ${ampm}`;
     let chatContent = className === "outgoing" 
-        ? `<p>${message}</p>` 
-        : `<i class='bx bxs-bot'></i><p>${message}</p>`;
+    ? `<div class="message-container"><p>${message}</p><span class="timestamp">${formattedTime}</span></div>` 
+    : `<i class='bx bxs-bot'></i><div class="message-container"><p>${message}</p><span class="timestamp">${formattedTime}</span></div>`;
     chatli.innerHTML = chatContent;
     return chatli;
 }
@@ -92,7 +98,7 @@ const handleChat = () => {
     let understood = false;
 
     for (const question in responses) {
-        if (userMessage.toLowerCase().includes(question.toLowerCase())) {
+        if (userMessage.toLowerCase() === question.toLowerCase()) {
             botResponse = responses[question];
             understood = true;
             break;
