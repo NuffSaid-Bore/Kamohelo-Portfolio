@@ -98,7 +98,7 @@ const handleChat = () => {
     let understood = false;
 
     for (const question in responses) {
-        if (userMessage.toLowerCase() === question.toLowerCase()) {
+        if (userMessage.toLowerCase().includes(question.toLowerCase())) {
             botResponse = responses[question];
             understood = true;
             break;
