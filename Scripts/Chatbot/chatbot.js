@@ -27,9 +27,9 @@ const responses = {
     "I'm okay and yourself": "Glad to know! How can i be of assistance today?",
     "Where are you currently located 🏠": "I am currently located in Johannesburg, Gauteng",
     "What 💻 services do you offer": "I offer web development, web design,mobile dev , mobile design, and SEO services.",
-    "Can you tell me about yourself 🧑": "I'm a software developer with over 2 years in web dev and over 3 years in mobile app dev currently based in Johannesburg Gauteng",
-    "How can I 📲 contact you": "You can reach me through the contact form on this website or via a phone call 0748632478",
-    "What 💼 projects have you worked on": "I have worked on various web development projects, Mobile Appliacation Projects also including design. For more visit: https://github.com/NuffSaid-Bore?tab=repositories",
+    "Can you tell me about yourself 🧑": "I'm a software developer with over 2 years in web dev and over 3 years in mobile app dev currently based in Johannesburg Gauteng.",
+    "How can I 📲 contact you": "You can reach me through the contact form on this website contact form or via a phone call 0748632478. ",
+    "What 💼 projects have you worked on": "I have worked on various web development projects, Mobile Appliacation Projects also including design. For more, visit: <a href='https://github.com/NuffSaid-Bore?tab=repositories' target='_blank'>my GitHub repositories</a>.",
     "What is your experience 🏢": "I have several years of experience in web development, mobile development and recenty started with design.",
     "🗣 Speak to an agent": "Connecting you to an agent. You’ll receive a response soon!",
     "Goodbye bye": "Goodbye! Have a great day!",
@@ -41,6 +41,7 @@ const optionResponses = [
     { text: "How can I 📲 contact you?", value: "How can I 📲 contact you?" },
     { text: "Where are you currently located 🏠?", value: "Where are you currently located 🏠?" },
     { text: "What is your experience 🏢?", value: "What is your experience 🏢?" },
+    { text: "What 💼 projects have you worked on?", value: "What 💼 projects have you worked on" },
     { text: "🗣 Speak to an agent?", value: "🗣 Speak to an agent?" },
     { text: "Goodbye", value: "Goodbye" }
 ];
