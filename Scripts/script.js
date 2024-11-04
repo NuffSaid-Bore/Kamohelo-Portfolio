@@ -1,6 +1,6 @@
 import './About/about.js';
 import './Contact/contact.js';
-import './Chatbot/chatbot.js'
+import './Chatbot/chatbot.js';
 
 const menuLinks = document.querySelectorAll('.menu a');
 const sections = document.querySelectorAll('.section');
