@@ -89,7 +89,6 @@
     color: var(--clr-default);
     cursor: pointer;
     transform: translateY(-50%);
-    display: none;
 }
 .chatbot header h2 {
     color: var(--clr-default);
@@ -278,7 +277,41 @@
   .typing .dot:last-child {
     margin-right: 0;
   }
-  
+  .popup-message {
+    display: none;
+}
+.popup-message.show {
+    position: fixed;
+    right: 40px; 
+    bottom: 100px; 
+    height: 65px;
+    width: 150px; 
+    background-color: var(--clr-primary-dark); 
+    border-radius: 15px 15px 0 15px; 
+    padding: 5px; 
+    color: var(--clr-default); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    animation: fadeInUp 1s ease forwards; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    z-index: 10;
+}
+
+.popup-message p {
+    text-align: center;
+    margin: 0;
+}
+
+.popup-message i {
+    position: absolute; 
+    top: 5px; 
+    right: 10px; 
+    cursor: pointer; 
+    color: var(--clr-default);
+}
+
   @keyframes mercuryTypingAnimation {
     0% {
       transform: translateY(0px);
@@ -317,17 +350,16 @@
         height: 90%;
     }
     .chatbot header i{
-        display: block;
         font-size: 1.2rem;
         font-weight: 600;
     }
     .chat-toggle {
-        background-color:  var(--clr-primary);
+        background-color:  var(--clr-primary-dark);
         position: fixed;
         right: 20px;
         bottom: 33px;
-        height: 40px;
-        width: 40px;
+        height: 45px;
+        width: 45px;
         border: none;
         outline: none;
         border-radius: 50%;
@@ -358,6 +390,27 @@
     }
     .online-name {
         font-size: 0.85rem;
+    }
+    .popup-message.show {
+        position: fixed;
+        right: 20px; 
+        bottom: 100px; 
+        height: 65px;
+        width: 100px; 
+        background-color: var(--clr-primary-dark); 
+        border-radius: 15px 15px 0 15px; 
+        padding: 5px; 
+        color: var(--clr-default); 
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        animation: fadeInUp 1s ease forwards;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+        z-index: 10;
+    }
+    .popup-message p {
+        font-size: 0.65rem;
     }
 
 }

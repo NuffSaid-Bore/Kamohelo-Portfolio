@@ -4,6 +4,7 @@ const chatbox = document.querySelector(".chatbox");
 const typingIndicator = document.querySelector(".typing");
 const chatbotToggle = document.querySelector(".chat-toggle");
 const chatCloseButton = document.querySelector(".close-icon");
+const popup = document.getElementById('popupMessage');
 
 let userMessage;
 
@@ -31,8 +32,8 @@ const responses = {
     "How can I 📲 contact you": "You can reach me through the contact form on this website contact form or via a phone call 0748632478. ",
     "What 💼 projects have you worked on": "I have worked on various web development projects, Mobile Appliacation Projects also including design. For more, visit: <a href='https://github.com/NuffSaid-Bore?tab=repositories' target='_blank'>my GitHub repositories</a>.",
     "What is your experience 🏢": "I have several years of experience in web development, mobile development and recenty started with design.",
-    "🗣 Speak to an agent": "Connecting you to an agent. You’ll receive a response soon!",
-    "Goodbye bye": "Goodbye! Have a great day!",
+    "🗣 Speak to an agent": "Connecting you to an agent. You’ll have to provide your Email Address <input type='email' placeholder='Email address'>",
+    "Goodbye": "Goodbye! Have a great day!",
 };
 
 const optionResponses = [
@@ -130,6 +131,28 @@ chatInput.addEventListener("keypress", function(event) {
     }
 });
 
+window.onload = function() {
+    setTimeout(function() {
+        popup.style.display = 'flex';
+        popup.classList.add('show');
+    }, 5000); 
+};
+
+
+document.getElementById('closePopup').onclick = function() {
+    popup.classList.remove('show');
+    popup.style.display = 'none'; 
+};
+
+
 sendChatBtn.addEventListener("click", handleChat);
-chatbotToggle.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-chatCloseButton.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggle.addEventListener("click", () => {
+    document.body.classList.toggle("show-chatbot");
+    popup.classList.remove('show');
+    popup.style.display = 'none';
+} );
+chatCloseButton.addEventListener("click", () =>{
+    document.body.classList.remove("show-chatbot")
+    popup.classList.add('show');
+    popup.style.display = 'flex';
+});
