@@ -312,6 +312,130 @@
     color: var(--clr-default);
 }
 
+.chat-btn-send {
+    margin-left: 15%;
+    height: 30px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.btns {
+    padding-left: 10px;
+    background: var(--clr-bg);
+    border-radius: 40px;
+    box-shadow: 0 0 10px var(--clr-primary-dark);
+    font-size: 16px;
+    color: var(--clr-primary-dark);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 5px;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+.btns:hover {
+    background: var(--clr-default);
+    box-shadow: 0 0 10px var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+
+.toast{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border-radius: 12px;
+    background: var(--clr-default);
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid var(--clr-primary);
+    overflow: hidden;
+    transform: translateX(calc(100% + 30px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+    z-index: 10;
+    display: none;
+}
+.toast i {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--clr-primary);
+    margin-top: 10px;
+    background-color: var(--clr-bg);
+    padding: 10px;
+    border-radius: 50%;
+    
+}
+.toast.active{
+    display: flex;
+    transform: translateX(0%);
+}
+.toast .toast-content{
+    display: flex;
+    align-items: center;
+}
+.toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: var(--clr-primary);
+    color: var(--clr-default);
+    font-size: 20px;
+    border-radius: 50%;
+}
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+.message .text{
+    font-size: 20px;
+    font-weight: 400;;
+    color: #666666;
+}
+.message .text.text-1{
+    font-weight: 600;
+    color: #333;
+}
+.toast .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.toast .close:hover{
+    opacity: 1;
+}
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+.toast .progress:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--clr-primary);
+}
+.progress.active:before{
+    animation: progress 5s linear forwards;
+}
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
+}
+
+
   @keyframes mercuryTypingAnimation {
     0% {
       transform: translateY(0px);
@@ -412,5 +536,6 @@
     .popup-message p {
         font-size: 0.65rem;
     }
+
 
 }

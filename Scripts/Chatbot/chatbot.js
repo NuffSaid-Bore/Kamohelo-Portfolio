@@ -32,7 +32,7 @@ const responses = {
     "How can I 📲 contact you": "You can reach me through the contact form on this website contact form or via a phone call 0748632478. ",
     "What 💼 projects have you worked on": "I have worked on various web development projects, Mobile Appliacation Projects also including design. For more, visit: <a href='https://github.com/NuffSaid-Bore?tab=repositories' target='_blank'>my GitHub repositories</a>.",
     "What is your experience 🏢": "I have several years of experience in web development, mobile development and recenty started with design.",
-    "🗣 Speak to an agent": "Connecting you to an agent. You’ll have to provide your Email Address <input type='email' placeholder='Email address'>",
+    "🗣 Speak to an agent": "Connecting you to an agent. You’ll have to provide your Email Address <input type='email' id='chatEmail' placeholder='Email address'><br><input type='text' id='chatMessage' placeholder='Message'><br> <button type='submit' id='sendEmailBtn' class='btns chat-btn-send'>Send</button>",
     "Goodbye": "Goodbye! Have a great day!",
 };
 
@@ -143,6 +143,95 @@ document.getElementById('closePopup').onclick = function() {
     popup.classList.remove('show');
     popup.style.display = 'none'; 
 };
+
+// Custom Alert Box
+const toast = document.querySelector(".toast");
+const closeIcon = document.querySelector(".close");
+const progress = document.querySelector(".progress");
+let timer1, timer2;
+
+function showToast(message1, message2) {
+    // Set the dynamic messages
+    const text1 = toast.querySelector(".text.text-1");
+    const text2 = toast.querySelector(".text.text-2");
+
+    text1.textContent = message1;
+    text2.textContent = message2;
+
+    // Show the toast
+    toast.classList.add("active");
+    progress.classList.add("active");
+
+    // Set timers to hide the toast
+    timer1 = setTimeout(() => {
+        toast.classList.remove("active");
+    }, 5000);
+
+    timer2 = setTimeout(() => {
+        progress.classList.remove("active");
+    }, 5300);
+}
+
+// Close icon click event
+closeIcon.addEventListener("click", () => {
+    toast.classList.remove("active");
+    setTimeout(() => {
+        progress.classList.remove("active");
+    }, 300);
+    clearTimeout(timer1);
+    clearTimeout(timer2);
+});
+
+
+// Function to validate email and send it
+const sendEmail = () => {
+    const emailInput = document.getElementById('chatEmail');
+    const messageInput = document.getElementById('chatMessage');
+    
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    if (!email) {
+        showToast("Error", "Email address cannot be empty.");
+        return;
+    }
+    if (!message) {
+        showToast("Error", "Message cannot be empty.");
+        return;
+    }
+
+    if (!validateEmail(email)) {
+        showToast("Error", "Please enter a valid email address..");
+        return;
+    }
+
+    const subject = `${message}`;
+    const body = `Message from the portfolio: ${message}`;
+
+    // Here you would send the email to your server or use an API
+    console.log(`Sending email to: borekamohelo@gmail.com\nSubject: ${subject}\nBody: ${body}`);
+    
+    showToast("Success", `Email sent to borekamohelo@gmail.com from ${email}!`);
+
+    // Clear the input fields after sending
+    emailInput.value = '';
+    messageInput.value = '';
+};
+
+// Email validation function
+const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+};
+
+// Modify the chat handler for the email button
+chatbox.addEventListener('click', (event) => {
+    if (event.target.id === 'sendEmailBtn') {
+        sendEmail();
+    }
+});
+
+
 
 
 sendChatBtn.addEventListener("click", handleChat);
